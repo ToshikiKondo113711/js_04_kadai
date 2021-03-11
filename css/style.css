@@ -1,0 +1,69 @@
+.container {
+    width: 60%;
+    margin: 30px auto;
+  }
+
+  /* チャットの表示領域はスクロール可能にする */
+.chat-area {
+    height: 80vh;
+    background: #8DB4E5;
+    overflow: scroll
+  }
+
+  /* メッセージの入力部分は高さを10vhにして、テキストエリアとボタンをflexで横並びにする*/
+.message-area {
+    height: 10vh;
+    display: flex;
+   }
+    /* テキストエリアは20%で表示 */
+    .name-area-text {
+        width: 20%;
+       }
+
+   /* テキストエリアは60%で表示 */
+   .message-area-text {
+    width: 60%;
+   }
+   
+   /* テキストエリアは20%で表示 */
+   .message-area-button {
+    width: 20%;
+   }
+
+   /* テキストエリアはリサイズをできなくして、横幅いっぱいに表示 */
+.message-area-text textarea {
+    width: 100%;
+    height: 100%;
+    resize: none; /* これでユーザーのリサイズをできなくする */
+    border: 1px solid #ddd; /* 枠線をつけて領域を分かりやすく */
+    box-sizing: border-box; /* borderを付けてるので、border込の大きさにする */
+   }
+
+   .name-area-text textarea {
+    width: 100%;
+    height: 100%;
+    resize: none; /* これでユーザーのリサイズをできなくする */
+    border: 1px solid #ddd; /* 枠線をつけて領域を分かりやすく */
+    box-sizing: border-box; /* borderを付けてるので、border込の大きさにする */
+   }
+
+   /* ボタンはグリーンのボタンにして、上下左右を全体に広げる */
+.message-area-button button {
+    width: 100%;
+    height: 100%;
+    background: #61E739;
+    color: #fff;
+    font-size: 2.0rem;
+    font-weight: bold;
+    border: 0;
+   }
+
+   プレイヤーボタンのクリック感
+.disabled-button{ 
+ 
+	/* 透明度を上げることで、画像の色を薄く見せる。*/
+	opacity:0.5; 
+ 
+	/* リンクをホバーしたときのカーソルにする。*/
+	 cursor: pointer;
+}

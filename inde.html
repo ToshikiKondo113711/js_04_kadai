@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Chatアプリ</title>
+
+
+<body>
+    <div class="container">
+        <div class="chat-area"></div>
+        <div class="message-area">
+            <div class="name-area-text">
+                <textarea id="username">名前を入力</textarea>
+             </div>
+            <div class="message-area-text">
+                <textarea id="text">送信内容を入力</textarea>
+          </div>
+          <div class="message-area-button">
+            <button id="send" class="disabled-button">送信</button>
+          </div>
+        </div>
+      </div>
+<!-- jQueryを読み込む！必ず先に！ -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- JQuery -->
+
+<!--** 以下Firebase **-->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<!-- firebaseのverが変わるので、数字がどんどん変化します🙋‍♀️ -->
+<!-- ここにfirebaseのscriptを貼り付ける -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase.js"></script>
+
+<script> 
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "",
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: "",
+    databaseURL: "",
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  
+  //firebaseのデーターベース（保存させる場所）を使いますよ
+  const newPostRef = firebase.database().ref();
+</script>
+
+
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<!-- 最後に自分が記述するjsを読み込む -->
+<script src='js/app.js'></script>
+
+
+
+</body>
+
+
+
+</html>
